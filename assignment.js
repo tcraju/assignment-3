@@ -1,4 +1,4 @@
- //Solution for the question no 1.
+ //Solution for the probelem no 1.
  
  function feetToMile(feet) {
      if (feet >= 0) {
@@ -11,7 +11,7 @@
  var convertedMile = feetToMile(30000);
  console.log(convertedMile);
 
-//Solution for the question no 2.
+//Solution for the problem no 2.
 
  function woodCalculator(chairNos, tabelNos, bedNos){
         var woodCount = chairNos*1 + tabelNos*3 + bedNos*5;
@@ -22,5 +22,18 @@
  var woodVolume = woodCalculator(2, 3, 5); 
  console.log(woodVolume);
 
-
- function brickCalculator
+//Solution for the problem no 3.
+ function brickCalculator(floorNos){
+     if ( floorNos>=0 && floorNos<=10){
+        var upToTen = floorNos*15*1000;
+         return upToTen;
+     } else if(floorNos > 10 && floorNos <= 20) {
+        var upToTwenty = 10*15*1000 + (floorNos-10)*12*1000;
+        return upToTwenty;
+     } else if (floorNos>20){
+         var moreThanTwenty = (10*15*1000) + (10*12*1000)+ (floorNos-20)*10*1000;
+         return moreThanTwenty;
+     }
+ }
+ var totalBrick = brickCalculator(22);
+ console.log(totalBrick);
